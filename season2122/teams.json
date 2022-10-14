@@ -1,0 +1,355 @@
+{	"SC Adelsdorf":
+	{
+		"id"  :  "adelsdorf",
+		"long1": "SC",
+		"long2": "Adelsdorf"
+	},
+	"ASV Möhrendorf":
+	{
+		"id":    "asv",
+		"long1": "ASV",
+		"long2": "Möhrendorf"
+	},
+	"ATSV Erlangen U23":
+	{
+		"id":    "atsv_erlangen",
+		"long1": "ATSV",
+		"long2": "Erlangen U23"
+	},
+	"ATSV Forchheim":
+	{
+		"id":  "atsv_forchheim",
+		"long1": "ATSV",
+		"long2": "Forchheim"
+	},
+	"SC Aurachtal Münchaurach":
+	{
+		"id":  "aurachtal_muenchaurach",
+		"long1": "SC Aurachtal",
+		"long2": "Münchaurach"
+	},
+	"Baiersdorfer SV":
+	{
+		"id":  "baiersdorf",
+		"long1": "Baiersdorfer",
+		"long2": "SV"
+	},
+	"FSV Erlangen-Bruck":
+	{
+		"id": 	 "bruck",
+		"long1": "FSV Erlangen",
+		"long2": "Bruck"
+	},
+	"SV Bubenreuth":
+	{
+		"id":    "bubenreuth",
+		"long1": "SV",
+		"long2": "Bubenreuth"
+	},
+	"SV Buckenhofen":
+	{
+		"id":    "buckenhofen",
+		"long1": "SV",
+		"long2": "Buckenhofen"
+	},
+	"1. FC Burk":
+	{
+		"id":    "burk",
+		"long1": "1. FC",
+		"long2": "Burk"
+	},
+	"DJK Erlangen":
+	{
+		"id":    "djkerlangen",
+		"long1": "DJK",
+		"long2": "Erlangen"
+	},
+	"SG Drügendorf/Weigelshofen":
+	{
+		"id":    "drügendorf",
+		"long1": "SG Drügendorf",
+		"long2": "Weigelshofen"
+	},
+	"TSV Ebermannstadt":
+	{
+		"id":    "ebermannstadt",
+		"long1": "TSV",
+		"long2": "Ebermannstadt"
+	},
+	"SpVgg Effeltrich":
+	{
+		"id":  "effeltrich",
+		"long1": "SpVgg",
+		"long2": "Effeltrich"
+	},
+	"SG SpVgg Effeltrich /DJK Kersbach/SV Poxdorf":
+	{
+		"id":  "effeltrich",
+		"long1": "Effeltrich Kers-",
+		"long2": "bach Poxdorf"
+	},
+	"SV DJK Eggolsheim":
+	{
+		"id":  "eggolsheim",
+		"long1": "SV DJK",
+		"long2": "Eggolsheim"
+	},
+	"SC Eltersdorf":
+	{
+		"id":    "eltersdorf",
+		"long1": "SC",
+		"long2": "Eltersdorf"
+	},
+	"SpVgg Erlangen":
+	{
+		"id":	 "spvgg_erlangen",
+		"long1": "SpVgg",
+		"long2": "Erlangen"
+	},
+	"SpVgg Etzelskirchen":
+	{
+		"id":    "etzelskirchen",
+		"long1": "SpVgg",
+		"long2": "Etzelskirchen"
+	},
+	"1. FC Herzogenaurach":
+	{
+		"id":    "fc_herzogenaurach",
+		"long1": "1. FC",
+		"long2": "Herzogenaurach"
+	},
+	"FC Großdechsendorf":
+	{
+		"id":	 "grossdechsendorf",
+		"long1": "FC Groß-",
+		"long2": "dechsendorf"
+	},
+	"FSV Großenseebach":
+	{
+		"id":    "großenseebach",
+		"long1": "FSV",
+		"long2": "Großenseebach"
+	},
+	"DJK Hallerndorf":
+	{
+		"id":    "hallerndorf",
+		"long1": "DJK",
+		"long2": "Hallerndorf"
+	},
+	"Spvgg Hausen":
+	{
+		"id":    "hausen",
+		"long1": "SpVgg",
+		"long2": "Hausen"
+	},
+	"TSV Hemhofen":
+	{
+		"id":    "hemhofen",
+		"long1": "TSV",
+		"long2": "Hemhofen"
+	},
+	"SpVgg/DJK Heroldsbach/Thurn":
+	{
+		"id":    "heroldsbach_thurn",
+		"long1": "SpVgg DJK",
+		"long2": "Heroldsbach Thurn"
+	},
+	"SC Hertha Aisch":
+	{
+		"id":    "hertha_aisch",
+		"long1": "SC Hertha",
+		"long2": "Aisch"
+	},
+	"SC Herzogenaurach Nord":
+	{
+		"id":    "herzo_nord",
+		"long1": "SC",
+		"long2": "Herzogenaurach Nord"
+	},
+	"SpVgg Heßdorf":
+	{
+		"id":  "hessdorf",
+		"long1": "SpVgg",
+		"long2": "Heßdorf"
+	},
+	"SG Höchstadt Gremsdorf":
+	{
+		"id":    "hoechstadt_gremsdorf",
+		"long1": "SG Höchstadt",
+		"long2": "Gremsdorf"
+	},
+	"SpVgg Jahn Forchheim":
+	{
+		"id":    "jahn_forchheim",
+		"long1": "SpVgg Jahn",
+		"long2": "Forchheim"
+	},
+	"DJK Kersbach":
+	{
+		"id":    "kersbach",
+		"long1": "DJK",
+		"long2": "Kersbach"
+	},
+	"TSV Kirchehrenbach":
+	{
+		"id":    "kirchehrenbach",
+		"long1": "TSV Kirch-",
+		"long2": "ehrenbach"
+	},
+	"SV Langensendelbach":
+	{
+		"id":    "langensendelbach",
+		"long1": "SV Langen-",
+		"long2": "sendelbach"
+	},
+	"SG Leutenbach/Mittelehrenbach":
+	{
+		"id":    "leutenbach",
+		"long1": "SG Leutenbach",
+		"long2": "Mittelehrenbach"
+	},
+	"TSV Lonnerstadt":
+	{
+		"id":    "lonnerstadt",
+		"long1": "TSV",
+		"long2": "Lonnerstadt"
+	},
+	"SG Marloffstein/SV Bubenreuth":
+	{
+		"id":    "marloffstein_bubenreuth",
+		"long1": "SG Marloffstein",
+		"long2": "SV Bubenreuth"
+	},
+	"SG Neuses I / Altendorf":
+	{
+		"id":    "neuses",
+		"long1": "SG Neuses",
+		"long2": "Altendorf"
+	},
+	"1. FC Niederlindach":
+	{
+		"id":    "niederlindach",
+		"long1": "1. FC",
+		"long2": "Niederlindach"
+	},
+	"ASV Niederndorf":
+	{
+		"id":    "niederndorf",
+		"long1": "ASV",
+		"long2": "Niederndorf"
+	},
+	"DJK Oesdorf":
+	{
+		"id":    "oesdorf",
+		"long1": "DJK",
+		"long2": "Oesdorf"
+	},
+	"DJK Pautzfeld":
+	{
+		"id":    "pautzfeld",
+		"long1": "DJK",
+		"long2": "Pautzfeld"
+	},
+	"DJK TSV Pinzberg":
+	{
+		"id":    "pinzberg",
+		"long1": "DJK TSV",
+		"long2": "Pinzberg"
+	},
+	"SV Poxdorf":
+	{
+		"id":  "poxdorf",
+		"long1": "SV",
+		"long2": "Poxdorf"
+	},
+	"SV Pretzfeld":
+	{
+		"id":    "pretzfeld",
+		"long1": "SV",
+		"long2": "Pretzfeld"
+	},
+	"SpVgg Reuth":
+	{
+		"id":    "reuth",
+		"long1": "SpVgg",
+		"long2": "Reuth"
+	},
+	"TSV Röttenbach/ERH":
+	{
+		"id":    "roettenbach",
+		"long1": "TSV",
+		"long2": "Röttenbach"
+	},
+	"DJK-FC Schlaifhausen":
+	{
+		"id":    "schlaifhausen",
+		"long1": "DJK-FC",
+		"long2": "Schlaifhausen"
+	},
+	"SGS Erlangen":
+	{
+		"id":    "siemens_erlangen",
+		"long1": "SG Siemens",
+		"long2": "Erlangen"
+	},
+	"VdS Spardorf":
+	{
+		"id":    "spardorf",
+		"long1": "VdS",
+		"long2": "Spardorf"
+	},
+	"SV Tennenlohe":
+	{
+		"id":    "tennenlohe",
+		"long1": "SV",
+		"long2": "Tennenlohe"
+	},
+	"TKV Forchheim":
+	{
+		"id":    "tkv_forchheim",
+		"long1": "TKV",
+		"long2": "Forchheim"
+	},
+	"SpVgg Uehlfeld":
+	{
+		"id":    "uehlfeld",
+		"long1": "SpVgg",
+		"long2": "Uehlfeld"
+	},
+	"SC Uttenreuth":
+	{
+		"id":    "uttenreuth",
+		"long1": "SC",
+		"long2": "Uttenreuth"
+	},
+	"TSV Vestenbergsgreuth":
+	{
+		"id":    "vestenbergsgreuth",
+		"long1": "TSV Festen-",
+		"long2": "bergsgreuth"
+	},
+	"Victoria Erlangen":
+	{
+		"id":    "victoria",
+		"long1": "Victoria",
+		"long2": "Erlangen"
+	},
+	"SV Weilersbach":
+	{
+		"id":    "weilersbach",
+		"long1": "SV Gloria",
+		"long2": "Weilersbach"
+	},
+	"DJK Wimmelbach":
+	{
+		"id":    "wimmelbach",
+		"long1": "DJK",
+		"long2": "Wimmelbach"
+	},
+	"SpVgg Zeckern":
+	{
+		"id":    "zeckern",
+		"long1": "SpVgg",
+		"long2": "Zeckern"
+	}
+}

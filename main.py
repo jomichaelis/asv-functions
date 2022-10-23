@@ -1,9 +1,10 @@
 import firebase_admin
 import functions_framework
 from firebase_admin import credentials, storage, firestore
-from season2122 import helper as helper
+from season2223 import helper as helper
 import io
 from flask import jsonify
+from datetime import datetime as dt
 
 
 @functions_framework.http
@@ -67,9 +68,10 @@ def create_and_upload(team: int = 1, platform: str = "facebook"):
 
 def upload_image(img_io: io.BytesIO = b'', platform: str = "facebook", team: int = 1):
 	bucket = storage.bucket()
-	blob = bucket.blob(f"{team}_{platform}.png")
+	isodate = dt.now().strftime("%Y-%m-%d_%H-%M-%S")
+	blob = bucket.blob(f"{isodate}_{team}_{platform}.png")
 
-	metadata = {'contentType': "image/png"}
+	metadata = {'contentType': "image/png", 'cacheControl': 'public,max-age=0'}
 	blob.metadata = metadata
 
 	blob.upload_from_string(img_io.getvalue(), content_type='image/png')
@@ -79,8 +81,12 @@ def upload_image(img_io: io.BytesIO = b'', platform: str = "facebook", team: int
 
 
 if __name__ == "__main__":
-	for t in range(1, 3):
-		for p in ["facebook", "instagram"]:
-			img = helper.create_image(p, t)
-			with open(f"{p}_{t}.png", "wb") as f:
-				f.write(img.getbuffer())
+	create_and_upload(2, "facebook")
+	# img = helper.create_image("facebook", 1)
+	# with open(f"test.png", "wb") as f:
+	# 	f.write(img.getbuffer())
+	# for t in range(1, 3):
+	# 	for p in ["facebook", "instagram"]:
+	# 		img = helper.create_image(p, t)
+	# 		with open(f"{p}_{t}.png", "wb") as f:
+	# 			f.write(img.getbuffer())

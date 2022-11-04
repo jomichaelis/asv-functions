@@ -144,12 +144,12 @@
 		"long1": "1. FC",
 		"long2": "Herzogenaurach"
 	},
-	"FC Großdechsendorf":
+	"FC Dechsendorf":
 	{
-		"id":	 "grossdechsendorf",
-		"name":	 "FC Großdechsendorf",
-		"long1": "FC Groß-",
-		"long2": "dechsendorf"
+		"id":	 "dechsendorf",
+		"name":	 "FC Dechsendorf",
+		"long1": "FC",
+		"long2": "Dechsendorf"
 	},
 	"FSV Großenseebach":
 	{
@@ -263,12 +263,12 @@
 		"long1": "SG Marloffstein",
 		"long2": "SV Bubenreuth"
 	},
-	"SG Neuses I / Altendorf":
+	"SC Neuses":
 	{
 		"id":    "neuses",
-		"name":	 "SG Neuses Altendorf",
-		"long1": "SG Neuses",
-		"long2": "Altendorf"
+		"name":	 "SC Neuses",
+		"long1": "SC",
+		"long2": "Neuses"
 	},
 	"1. FC Niederlindach":
 	{

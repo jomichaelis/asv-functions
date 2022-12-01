@@ -30,11 +30,17 @@ def create_image(platform: str, team: int):
 	if home[-2:] == " 2":
 		team_home = 2
 		home = home.replace(' 2', '')
+	if home[-3:] == " II":
+		team_home = 2
+		home = home.replace(' II', '')
 	guest = soup.find("div", class_="bfv-matchdata-result__team-name--team1").text.strip()
 	team_guest = 1
 	if guest[-2:] == " 2":
 		team_guest = 2
 		guest = guest.replace(' 2', '')
+	if guest[-3:] == " II":
+		team_guest = 2
+		guest = guest.replace(' II', '')
 
 	# print(home, team_home)
 	# print(guest, team_guest)
@@ -52,10 +58,10 @@ def create_image(platform: str, team: int):
 	liga = soup.find("a", class_="bfv-link-heading").find("h3").text.split()[0]
 
 	# ranks
-	ranks = soup.find("div", class_="bfv-direktvergleich__data-entry")\
-		.findAll("div", class_="bfv-direktvergleich-entry__data-text--basic")
-	rank_home_team = int(ranks[0].text.strip())
-	rank_guest_team = int(ranks[1].text.strip())
+	# ranks = soup.find("div", class_="bfv-direktvergleich__data-entry")\
+		# .findAll("div", class_="bfv-direktvergleich-entry__data-text--basic")
+	rank_home_team = 1 # int(ranks[0].text.strip())
+	rank_guest_team = 2 # int(ranks[1].text.strip())
 
 	with open(os.path.abspath(os.path.dirname(__file__)) + '/teams.json', 'r', encoding='utf-8') as f:
 		teams = json.load(f)

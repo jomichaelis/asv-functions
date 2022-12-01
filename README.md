@@ -23,3 +23,9 @@ Add a service-account key to obtain the content for the file:
 This project is deployed via Cloud Functions.
 
 Functionality can be triggered by http-requests only (CORS is disabled accordingly).
+
+## Zip for CloudFunctions-Upload
+
+```bash
+zip -r asv-functions.zip main.py requirements.py asv-webservices-firebase-credentials.json season2223/
+```

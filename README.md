@@ -27,5 +27,5 @@ Functionality can be triggered by http-requests only (CORS is disabled according
 ## Zip for CloudFunctions-Upload
 
 ```bash
-zip -r asv-functions.zip main.py requirements.py asv-webservices-firebase-credentials.json season2223/
+zip -r asv-functions.zip main.py requirements.txt asv-webservices-firebase-credentials.json season2223/
 ```

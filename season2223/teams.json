@@ -235,6 +235,13 @@
 		"long1": "TSV Kirch-",
 		"long2": "ehrenbach"
 	},
+	"SC Kühlenfels":
+	{
+		"id":	 "kuehlenfels",
+		"name":  "SC Kuehlenfels",
+		"long1": "SC Kühlen-",
+		"long2": "fels"
+	},
 	"SV Langensendelbach":
 	{
 		"id":    "langensendelbach",

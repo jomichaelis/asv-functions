@@ -5,8 +5,8 @@ from . import instagram
 import json
 import os
 from datetime import datetime as dt
-import locale
-
+# import locale
+import babel.dates
 
 def create_image(platform: str, team: int):
 	assert 0 < team < 3
@@ -50,9 +50,11 @@ def create_image(platform: str, team: int):
 	date_str = datetime[1].text.strip()[:10]
 	time_str = datetime[1].text.strip()[-9:-4]
 	d = dt.strptime(f"{date_str}T{time_str}", '%d.%m.%YT%H:%M')
-	locale.setlocale(locale.LC_TIME, "de_DE")
-	date = d.strftime("%A, %d. %B")
-	time = d.strftime("%H:%M")
+	# locale.setlocale(locale.LC_TIME, "de_DE")
+	# date = d.strftime("%A, %d. %B")
+	# time = d.strftime("%H:%M")
+	date = babel.dates.format_datetime(d, "EEEE, d. MMMM", locale="de_DE")
+	time = babel.dates.format_time(d, "H:mm", locale="de_DE")
 
 	# liga
 	liga = soup.find("a", class_="bfv-link-heading").find("h3").text.split()[0]

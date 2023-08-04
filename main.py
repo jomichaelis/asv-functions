@@ -1,7 +1,7 @@
 import firebase_admin
 import functions_framework
 from firebase_admin import credentials, storage, firestore
-from season2223 import helper as helper
+from season2324 import helper as helper
 import io
 from flask import jsonify
 from datetime import datetime as dt
@@ -26,7 +26,15 @@ def handle_request(request):
 	elif request_args and 'platform' in request_args:
 		platform = request_args['platform']
 	else:
-		platform = 'facebook'
+		platform = 'facebook_event'
+
+	available_platforms = {
+		"facebook_event": helper.SOCIAL_MEDIA.FB_EVENT,
+		"square": helper.SOCIAL_MEDIA.SQUARE,
+		"story": helper.SOCIAL_MEDIA.STORY
+	}
+	platform = available_platforms[platform]
+	print(platform)
 
 	if request_json and 'team' in request_json:
 		team = request_json['team']
@@ -41,7 +49,7 @@ def handle_request(request):
 	return response
 
 
-def create_and_upload(team: int = 1, platform: str = "facebook"):
+def create_and_upload(team: int = 1, platform: helper.SOCIAL_MEDIA = helper.SOCIAL_MEDIA.FB_EVENT):
 	if not firebase_admin._apps:
 		cred = credentials.Certificate('asv-webservices-firebase-credentials.json')
 		firebase_admin.initialize_app(cred, {
@@ -50,7 +58,7 @@ def create_and_upload(team: int = 1, platform: str = "facebook"):
 
 	# set document to loading=True
 	db = firestore.client()
-	doc_ref = db.collection(u'matchday-preview').document(u'{0}_asv{1}'.format(platform, team))
+	doc_ref = db.collection(u'matchday-preview').document(u'{0}_asv{1}'.format(str(platform.name), team))
 	doc_ref.update({u'loading': True})
 
 	# create image and upload
@@ -66,10 +74,10 @@ def create_and_upload(team: int = 1, platform: str = "facebook"):
 	return {"status": "success", "code": 200}
 
 
-def upload_image(img_io: io.BytesIO = b'', platform: str = "facebook", team: int = 1):
+def upload_image(img_io: io.BytesIO = b'', platform: helper.SOCIAL_MEDIA = helper.SOCIAL_MEDIA.FB_EVENT, team: int = 1):
 	bucket = storage.bucket()
 	isodate = dt.now().strftime("%Y-%m-%d_%H-%M-%S")
-	blob = bucket.blob(f"{isodate}_{team}_{platform}.png")
+	blob = bucket.blob(f"{isodate}_{team}_{str(platform)}.png")
 
 	metadata = {'contentType': "image/png", 'cacheControl': 'public,max-age=0'}
 	blob.metadata = metadata
@@ -81,12 +89,10 @@ def upload_image(img_io: io.BytesIO = b'', platform: str = "facebook", team: int
 
 
 if __name__ == "__main__":
-	create_and_upload(2, "facebook")
-	# img = helper.create_image("facebook", 1)
-	# with open(f"test.png", "wb") as f:
-	# 	f.write(img.getbuffer())
+	# create_and_upload(2, "instagram_square")
+	img = helper.create_image(platform=helper.SOCIAL_MEDIA.SQUARE, team=1)
+	with open(f"test.png", "wb") as f:
+		f.write(img.getbuffer())
 	# for t in range(1, 3):
-	# 	for p in ["facebook", "instagram"]:
-	# 		img = helper.create_image(p, t)
-	# 		with open(f"{p}_{t}.png", "wb") as f:
-	# 			f.write(img.getbuffer())
+	# 	for p in [helper.SOCIAL_MEDIA.FB_EVENT, helper.SOCIAL_MEDIA.SQUARE, helper.SOCIAL_MEDIA.STORY]:
+	# 		create_and_upload(team=t, platform=p)

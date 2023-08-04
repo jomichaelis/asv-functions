@@ -423,5 +423,12 @@
 		"name":	 "SpVgg Zeckern",
 		"long1": "SpVgg",
 		"long2": "Zeckern"
+	},
+	"SG SpVgg Zeckern/ TSV Röttenbach":
+	{
+		"id":    "zeckern",
+		"name":	 "SG Zeckern 2/Röttenbach",
+		"long1": "SG SpVgg Zeckern/",
+		"long2": "TSV Röttenbach 2"
 	}
 }

@@ -1,14 +1,19 @@
 import requests
 from bs4 import BeautifulSoup
-from . import facebook
-from . import instagram
+from . import facebook_event, story, square
 import json
 import os
 from datetime import datetime as dt
-# import locale
+from enum import Enum
 import babel.dates
 
-def create_image(platform: str, team: int):
+class SOCIAL_MEDIA(Enum):
+    FB_EVENT = facebook_event
+    STORY = story
+    SQUARE = square
+
+
+def create_image(platform: SOCIAL_MEDIA, team: int):
 	assert 0 < team < 3
 	links = [
 		'https://www.bfv.de/mannschaften/asv-moehrendorf/016PC46714000000VV0AG80NVV8OQVTB',
@@ -68,9 +73,7 @@ def create_image(platform: str, team: int):
 	with open(os.path.abspath(os.path.dirname(__file__)) + '/teams.json', 'r', encoding='utf-8') as f:
 		teams = json.load(f)
 
-	social_media = facebook if platform == 'facebook' else instagram
-
-	return social_media.create_image(
+	return platform.value.create_image(
 		home=teams[home],
 		guest=teams[guest],
 		team_home=team_home,

@@ -3,7 +3,7 @@ import os
 import io
 
 
-def resize_fb(image, max_size):
+def resize_fb_event(image, max_size):
 	rs_width, rs_height = image.size
 	ratio = min(max_size/rs_width, max_size/rs_height)
 	return image.resize((round(rs_width*ratio), round(rs_height*ratio)), Image.ANTIALIAS)
@@ -19,19 +19,19 @@ def create_image(home, guest, team_home, team_guest, rank_home, rank_guest, date
 	# paste logos
 	home_team_logo = home.get('id') + ".png"
 	guest_team_logo = guest.get('id') + ".png"
-	background = Image.open(os.path.abspath(os.path.dirname(__file__)) + "/bg_facebook.png")
+	background = Image.open(os.path.abspath(os.path.dirname(__file__)) + "/backgrounds/facebook_event.png")
 	img.paste(background)
 	home_logo = Image.open(os.path.abspath(os.path.dirname(__file__)) + '/logos/' + home_team_logo)
 	guest_logo = Image.open(os.path.abspath(os.path.dirname(__file__)) + '/logos/' + guest_team_logo)
 	home_asv = home.get('id') == "asv"
 	max_size = 310 if home_asv else 230
-	home_logo_to_draw = resize_fb(home_logo, max_size)
+	home_logo_to_draw = resize_fb_event(home_logo, max_size)
 	home_x_offset = 60 if home_asv else 0
 	home_x = int(310 - home_logo_to_draw.size[0]/2)
 	home_y_offset = -30 if home_asv else 0
 	home_y = int(215 - home_logo_to_draw.size[1]/2 + home_y_offset)
 	max_size = 310 if not home_asv else 230
-	guest_logo_to_draw = resize_fb(guest_logo, max_size)
+	guest_logo_to_draw = resize_fb_event(guest_logo, max_size)
 	guest_x_offset = -30 if not home_asv else 0
 	guest_x = int(1200 - 310 - guest_logo_to_draw.size[0]/2)
 	guest_y_offset = -30 if not home_asv else 0

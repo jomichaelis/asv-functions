@@ -3,7 +3,7 @@ import os
 import io
 
 
-def resize_ig(image, max_size):
+def resize_story(image, max_size):
 	rs_width, rs_height = image.size
 	ratio = min(max_size/rs_width, max_size/rs_height)
 	return image.resize((round(rs_width*ratio), round(rs_height*ratio)), Image.ANTIALIAS)
@@ -19,19 +19,19 @@ def create_image(home, guest, team_home, team_guest, rank_home, rank_guest, date
 	# paste logos
 	home_team_logo = home.get('id') + ".png"
 	guest_team_logo = guest.get('id') + ".png"
-	background = Image.open(os.path.abspath(os.path.dirname(__file__)) + "/bg_instagram.png")
+	background = Image.open(os.path.abspath(os.path.dirname(__file__)) + "/backgrounds/story.png")
 	img.paste(background)
 	home_logo = Image.open(os.path.abspath(os.path.dirname(__file__)) + '/logos/' + home_team_logo)
 	guest_logo = Image.open(os.path.abspath(os.path.dirname(__file__)) + '/logos/' + guest_team_logo)
 	home_asv = home.get('id') == "asv"
 	max_size = 550 if home_asv else 400
-	home_logo_to_draw = resize_ig(home_logo, max_size)
+	home_logo_to_draw = resize_story(home_logo, max_size)
 	home_x_offset = 60 if home_asv else 0
 	home_x = int(270 - home_logo_to_draw.size[0]/2 + home_x_offset)
 	home_y_offset = -100 if home_asv else 50
 	home_y = int(680 - home_logo_to_draw.size[1]/2 + home_y_offset)
 	max_size = 550 if not home_asv else 400
-	guest_logo_to_draw = resize_ig(guest_logo, max_size)
+	guest_logo_to_draw = resize_story(guest_logo, max_size)
 	guest_x_offset = -30 if not home_asv else 0
 	guest_x = int(1080 - 270 - guest_logo_to_draw.size[0]/2 + guest_x_offset)
 	guest_y_offset = -100 if not home_asv else 50

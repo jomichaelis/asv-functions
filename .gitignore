@@ -2,3 +2,6 @@ venv
 .idea
 asv-webservices-firebase-credentials.json
 __pycache__
+asv-functions.zip
+test.png
+**.code-workspace

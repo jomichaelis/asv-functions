@@ -8,9 +8,9 @@ from enum import Enum
 import babel.dates
 
 class SOCIAL_MEDIA(Enum):
-    FB_EVENT = facebook_event
-    STORY = story
-    SQUARE = square
+	FB_EVENT = facebook_event
+	STORY = story
+	SQUARE = square
 
 
 def create_image(platform: SOCIAL_MEDIA, team: int):

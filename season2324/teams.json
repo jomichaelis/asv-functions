@@ -47,12 +47,12 @@
 		"long1": "FSV Erlangen",
 		"long2": "Bruck 3"
 	},
-	"BSC Erlangen 2":
+	"BSC Erlangen":
 	{
 		"id": 	 "bsc_erlangen",
-		"name":	 "BSC Erlangen 2",
+		"name":	 "BSC Erlangen",
 		"long1": "BSC",
-		"long2": "Erlangen 2"
+		"long2": "Erlangen"
 	},
 	"SV Bubenreuth":
 	{

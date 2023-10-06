@@ -7,7 +7,7 @@ def resize_fb(image):
 	maxsize = 280
 	rs_width, rs_height = image.size
 	ratio = min(maxsize/rs_width, maxsize/rs_height)
-	return image.resize((round(rs_width*ratio), round(rs_height*ratio)), Image.ANTIALIAS)
+	return image.resize((round(rs_width*ratio), round(rs_height*ratio)), Image.LANCZOS)
 
 
 def create_image(home, guest, team_home, team_guest, rank_home, rank_guest, date, time, liga):

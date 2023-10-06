@@ -6,7 +6,7 @@ import io
 def resize_fb_event(image, max_size):
 	rs_width, rs_height = image.size
 	ratio = min(max_size/rs_width, max_size/rs_height)
-	return image.resize((round(rs_width*ratio), round(rs_height*ratio)), Image.ANTIALIAS)
+	return image.resize((round(rs_width*ratio), round(rs_height*ratio)), Image.LANCZOS)
 
 
 def create_image(home, guest, team_home, team_guest, rank_home, rank_guest, date, time, liga):
